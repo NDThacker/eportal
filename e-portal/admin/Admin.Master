@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="e_portal.admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+           
+                <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2" EnableTheming="True" Font-Names="Arial" Font-Size="X-Large" ForeColor="#990000" Orientation="Horizontal" RenderingMode="Table" StaticSubMenuIndent="10px" Width="100%">
+                    <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#FFFBD6" />
+                    <DynamicSelectedStyle BackColor="#FFCC66" />
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/admin/admin-info.aspx" Text="Admin-Info" Value="Admin-Info"></asp:MenuItem>
+                        <asp:MenuItem Text="Student" Value="Student">
+                            <asp:MenuItem Text="New Registration" Value="New Registration" NavigateUrl="~/admin/stud-register.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Update Existing" Value="Update Existing" NavigateUrl="~/admin/stud-update.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Faculty" Value="Faculty">
+                            <asp:MenuItem Text="New Registration" Value="New Registration" NavigateUrl="~/admin/faculty-register.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Update Existing" Value="Update Existing" NavigateUrl="~/admin/faculty-update.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Admin" Value="Admin">
+                            <asp:MenuItem Text="New Registration" Value="New Registration" NavigateUrl="~/admin/admin-register.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Update Existing" Value="Update Existing" NavigateUrl="~/admin/admin-update.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Other" Value="Other">
+                            <asp:MenuItem Text="Generate Hall-Ticket" Value="Generate Hall-Ticket" NavigateUrl="~/admin/generate-hallticket.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Assign Subject" Value="Assign Subject" NavigateUrl="~/admin/sub-assign.aspx"></asp:MenuItem>
+                            
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/admin/adminlogout.aspx" Text="Log Out" Value="Log Out"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#FFCC66" />
+                </asp:Menu>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
